@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case de Product Design sobre a criação de um CRM operacional integrado ao WhatsApp e agente de IA para organizar o atendimento real da Sartec Papelaria.">
+  <meta name="author" content="Lucas Alves Cabral">
+  <title>Ecossistema Sartec | Case de Product Design por Lucas Alves Cabral</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVEGAÇÃO
+  ============================================================ -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="nav-logo" aria-label="Início do case">
+        <span class="nav-logo-mark">S</span>
+        <span class="nav-logo-text">Case Sartec</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#arquitetura" class="nav-link">Arquitetura</a>
+        <a href="#crm-sartec" class="nav-link">CRM</a>
+        <a href="#agente-whatsapp" class="nav-link">Agente</a>
+        <a href="#decisoes" class="nav-link">Decisões</a>
+        <a href="#cta-final" class="nav-cta">Contato</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       1. HERO
+  ============================================================ -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-tags" aria-label="Tags do projeto">
+            <span class="tag tag--red">Produto em produção</span>
+            <span class="tag">Product Design</span>
+            <span class="tag">UX Operacional</span>
+            <span class="tag">Design Systems</span>
+            <span class="tag">CRM</span>
+            <span class="tag">WhatsApp Business</span>
+            <span class="tag">IA aplicada</span>
+            <span class="tag">Design Engineering</span>
+          </div>
+
+          <h1 class="hero-title">
+            Ecossistema Sartec: de WhatsApp informal a operação digital com CRM e IA
+          </h1>
+
+          <p class="hero-subtitle">
+            Como conduzi a criação de um sistema real de atendimento para organizar triagem, histórico, responsáveis, fluxos PF/PJ e decisões operacionais em uma papelaria tradicional.
+          </p>
+
+          <p class="hero-impact">
+            Organizar o atendimento não era só criar uma tela. Era redesenhar como a empresa recebe, entende, distribui e acompanha cada demanda.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#arquitetura" class="btn btn--primary">Ver arquitetura da solução</a>
+            <a href="#decisoes" class="btn btn--secondary">Ver decisões de design</a>
+          </div>
+
+          <p class="hero-author">
+            Por <strong>Lucas Alves Cabral</strong> · Product Designer
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <!-- MÍDIA 01 — Hero visual do ecossistema
+               Arquivo esperado: assets/media/media-01-hero-ecossistema-sartec.png
+               Alt: Composição visual do ecossistema Sartec conectando WhatsApp, agente de triagem, CRM e atendimento humano. -->
+          <div class="media-placeholder media-placeholder--hero"
+               role="img"
+               aria-label="Composição visual do ecossistema Sartec conectando WhatsApp, agente de triagem, CRM e atendimento humano.">
+            <div class="ecosystem-preview">
+              <div class="eco-node eco-node--whatsapp">
+                <div class="eco-node__icon" aria-hidden="true">💬</div>
+                <div class="eco-node__label">WhatsApp</div>
+                <div class="eco-node__sub">Canal de entrada</div>
+              </div>
+              <div class="eco-arrow" aria-hidden="true">→</div>
+              <div class="eco-node eco-node--agent">
+                <div class="eco-node__icon" aria-hidden="true">🤖</div>
+                <div class="eco-node__label">Agente IA</div>
+                <div class="eco-node__sub">Triagem + contexto</div>
+              </div>
+              <div class="eco-arrow" aria-hidden="true">→</div>
+              <div class="eco-node eco-node--crm">
+                <div class="eco-node__icon" aria-hidden="true">📋</div>
+                <div class="eco-node__label">CRM Kanban</div>
+                <div class="eco-node__sub">Pipeline + estados</div>
+              </div>
+              <div class="eco-arrow" aria-hidden="true">→</div>
+              <div class="eco-node eco-node--human">
+                <div class="eco-node__icon" aria-hidden="true">👤</div>
+                <div class="eco-node__label">Atendente</div>
+                <div class="eco-node__sub">Decisão humana</div>
+              </div>
+            </div>
+            <div class="media-placeholder__footer">
+              <span class="media-placeholder__filename">media-01-hero-ecossistema-sartec.png</span>
+              <span class="media-placeholder__hint">Substituir por composição visual real do ecossistema</span>
+            </div>
+          </div>
+          <p class="media-caption">Do WhatsApp informal ao sistema operacional: triagem, CRM e atendimento humano conectados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. VISÃO GERAL DO CASE
+  ============================================================ -->
+  <section id="visao-geral" class="section section--light">
+    <div class="container">
+      <div class="section-label">Visão geral</div>
+      <h2 class="section-title">O que foi feito, por quem e como</h2>
+      <p class="section-intro">
+        Este não é um projeto conceitual. É um sistema que existe, que foi usado em atendimento real e que evoluiu com feedback de operação. Meu papel foi conduzir todo o processo: observar, decidir, especificar, validar e iterar.
+      </p>
+
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-card__icon" aria-hidden="true">🏪</div>
+          <h3>Contexto</h3>
+          <p>Sartec Papelaria — empresa tradicional com atendimento forte via WhatsApp, sem sistema de gestão para organizar as demandas recebidas diariamente.</p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-card__icon" aria-hidden="true">⚠️</div>
+          <h3>Problema</h3>
+          <p>Mensagens dispersas, PF e PJ misturados, histórico difícil de acompanhar, risco de atendente responder sem contexto e ausência de pipeline claro.</p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-card__icon" aria-hidden="true">🎯</div>
+          <h3>Meu papel</h3>
+          <p>Product Designer conduzindo pesquisa contextual, modelagem de fluxo, UX/UI, UX writing, design de estados, especificação de comportamento e implementação assistida por IA.</p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-card__icon" aria-hidden="true">🚀</div>
+          <h3>Entrega</h3>
+          <p>CRM Kanban, agente WhatsApp, histórico completo, mídias, templates, estados de janela, controle de atendente, métricas operacionais e base para a Sartec Digital.</p>
+        </div>
+        <div class="overview-card overview-card--highlight">
+          <div class="overview-card__icon" aria-hidden="true">✅</div>
+          <h3>Status atual</h3>
+          <p><strong>Em produção.</strong> O sistema é usado em operação real pela equipe da Sartec Papelaria como ferramenta de trabalho no atendimento diário.</p>
+          <span class="badge badge--green">Produto em produção</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. O PROBLEMA REAL
+  ============================================================ -->
+  <section id="problema-real" class="section section--dark">
+    <div class="container">
+      <div class="section-label">O problema real</div>
+      <h2 class="section-title">Antes de desenhar interface, precisei entender o que a equipe precisava enxergar para decidir melhor.</h2>
+      <p class="section-intro">
+        O problema não era só volume de mensagens. Era falta de contexto, prioridade e responsabilidade. O atendimento funcionava — mas funcionava apesar do sistema, não por causa dele.
+      </p>
+
+      <div class="pain-grid">
+        <div class="pain-card" data-animate>
+          <div class="pain-card__icon" aria-hidden="true">📱</div>
+          <h3>Atendimento espalhado no WhatsApp</h3>
+          <p>Todos os contatos chegavam num único canal, sem separação de tipo, urgência, responsável ou status. Cada atendente precisava lembrar mentalmente o que estava aberto.</p>
+        </div>
+        <div class="pain-card" data-animate>
+          <div class="pain-card__icon" aria-hidden="true">👁️</div>
+          <h3>Sem visibilidade de quem está atendendo</h3>
+          <p>Dois atendentes podiam responder o mesmo cliente ao mesmo tempo — sem saber. Ou nenhum respondia, achando que o outro já tinha feito.</p>
+        </div>
+        <div class="pain-card" data-animate>
+          <div class="pain-card__icon" aria-hidden="true">🏢</div>
+          <h3>PF e PJ no mesmo fluxo</h3>
+          <p>Clientes pessoa física e empresas tinham necessidades, prazos e critérios completamente diferentes — mas eram tratados no mesmo pipeline, gerando confusão e erro de priorização.</p>
+        </div>
+        <div class="pain-card" data-animate>
+          <div class="pain-card__icon" aria-hidden="true">📎</div>
+          <h3>Mídias sem contexto estruturado</h3>
+          <p>Mensagens, áudios, PDFs e imagens chegavam soltos na conversa. Sem sistema de visualização, o atendente precisava rolar o histórico do WhatsApp para encontrar o que precisava.</p>
+        </div>
+        <div class="pain-card" data-animate>
+          <div class="pain-card__icon" aria-hidden="true">⏱️</div>
+          <h3>Janela de 24h criando limites invisíveis</h3>
+          <p>A janela de atendimento ativo do WhatsApp expirava sem que a equipe soubesse. Isso gerava falhas de comunicação silenciosas — a mensagem parecia enviada, mas não chegava.</p>
+        </div>
+        <div class="pain-card" data-animate>
+          <div class="pain-card__icon" aria-hidden="true">⚡</div>
+          <h3>Decisões rápidas com pouca informação</h3>
+          <p>Atendentes precisavam responder com velocidade, mas não tinham o contexto da última interação, o histórico de pedidos ou o status do cliente disponível de forma clara.</p>
+        </div>
+      </div>
+
+      <!-- MÍDIA 02 — Evidência do problema inicial
+           Arquivo esperado: assets/media/media-02-problema-whatsapp-informal.png
+           Alt: Representação do atendimento informal por WhatsApp antes da organização em CRM. -->
+      <div class="media-block">
+        <div class="media-placeholder media-placeholder--problem"
+             role="img"
+             aria-label="Representação do atendimento informal por WhatsApp antes da organização em CRM.">
+          <div class="whatsapp-chaos">
+            <div class="chaos-header">
+              <span class="chaos-title">Representação: caos operacional antes do sistema</span>
+            </div>
+            <div class="chaos-messages" aria-label="Simulação de atendimento sem sistema">
+              <div class="chaos-msg chaos-msg--in">
+                <div class="chaos-bubble">Oi, preciso de papel A4 pro escritório, umas 10 resmas</div>
+                <div class="chaos-meta">Cliente PJ · sem status · sem responsável · sem pipeline</div>
+              </div>
+              <div class="chaos-msg chaos-msg--in">
+                <div class="chaos-bubble">Quanto custa plastificação A3? É urgente</div>
+                <div class="chaos-meta">Cliente PF · urgência não registrada · sem contexto anterior</div>
+              </div>
+              <div class="chaos-msg chaos-msg--out">
+                <div class="chaos-bubble">Olá! Vou verificar e te respondo em breve 👍</div>
+                <div class="chaos-meta">Atendente A · sem anotação · sem transferência formal</div>
+              </div>
+              <div class="chaos-msg chaos-msg--in">
+                <div class="chaos-bubble">Vocês fazem xerox colorido? Preciso de 50 cópias</div>
+                <div class="chaos-meta">Cliente PF · sem rastreio de quem atende · aguardando</div>
+              </div>
+              <div class="chaos-msg chaos-msg--in">
+                <div class="chaos-bubble">Boa tarde, minha empresa precisa de cartão de visita pra 30 pessoas</div>
+                <div class="chaos-meta">Cliente PJ · novo pedido · sem histórico de conta acessível</div>
+              </div>
+            </div>
+            <div class="chaos-labels">
+              <span class="chaos-label chaos-label--red">Sem pipeline</span>
+              <span class="chaos-label chaos-label--orange">Sem responsável</span>
+              <span class="chaos-label chaos-label--yellow">Sem histórico</span>
+              <span class="chaos-label chaos-label--gray">Sem prioridade</span>
+            </div>
+          </div>
+          <div class="media-placeholder__footer">
+            <span class="media-placeholder__filename">media-02-problema-whatsapp-informal.png</span>
+            <span class="media-placeholder__hint">Substituir por print anonimizado ou ilustração do caos operacional real</span>
+          </div>
+        </div>
+        <p class="media-caption">O problema não era apenas volume de mensagens. Era falta de contexto, prioridade e responsabilidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. O INSIGHT DE PRODUTO
+  ============================================================ -->
+  <section id="insight-produto" class="section section--light">
+    <div class="container">
+      <div class="section-label">O insight de produto</div>
+      <h2 class="section-title">O gargalo não era falta de atendimento. Era falta de sistema.</h2>
+
+      <div class="insight-thesis">
+        <blockquote class="insight-quote">
+          "A solução não foi automatizar tudo. Foi separar o que a IA podia organizar do que o humano precisava decidir."
+        </blockquote>
+      </div>
+
+      <div class="insight-grid">
+        <div class="insight-card" data-animate>
+          <div class="insight-number" aria-hidden="true">01</div>
+          <div class="insight-role">
+            <span class="insight-actor">Agente WhatsApp</span>
+            <span class="insight-action">faz triagem</span>
+          </div>
+          <p>Recebe o contato, classifica PF ou PJ, coleta contexto e organiza antes de encaminhar. Reduz ambiguidade na entrada do fluxo.</p>
+        </div>
+        <div class="insight-card" data-animate>
+          <div class="insight-number" aria-hidden="true">02</div>
+          <div class="insight-role">
+            <span class="insight-actor">CRM Kanban</span>
+            <span class="insight-action">organiza</span>
+          </div>
+          <p>Transforma mensagens em trabalho visível. Cada atendimento vira um card com estágio, responsável, prioridade e próxima ação.</p>
+        </div>
+        <div class="insight-card" data-animate>
+          <div class="insight-number" aria-hidden="true">03</div>
+          <div class="insight-role">
+            <span class="insight-actor">Atendente humano</span>
+            <span class="insight-action">decide</span>
+          </div>
+          <p>Com o contexto já organizado pelo sistema, o humano entra para fazer o que só humano faz: negociar, resolver exceções, fechar pedido.</p>
+        </div>
+        <div class="insight-card" data-animate>
+          <div class="insight-number" aria-hidden="true">04</div>
+          <div class="insight-role">
+            <span class="insight-actor">Histórico</span>
+            <span class="insight-action">dá contexto</span>
+          </div>
+          <p>Toda mensagem, mídia, evento de template e nota fica registrada. O atendente nunca entra sem saber o que aconteceu antes.</p>
+        </div>
+        <div class="insight-card" data-animate>
+          <div class="insight-number" aria-hidden="true">05</div>
+          <div class="insight-role">
+            <span class="insight-actor">Estados visuais</span>
+            <span class="insight-action">reduzem erro</span>
+          </div>
+          <p>Janela aberta, fechada, expirada, atendente ativo — cada estado tem cor e badge próprios. O sistema não deixa o atendente adivinhar.</p>
+        </div>
+        <div class="insight-card" data-animate>
+          <div class="insight-number" aria-hidden="true">06</div>
+          <div class="insight-role">
+            <span class="insight-actor">Métricas</span>
+            <span class="insight-action">abrem gestão</span>
+          </div>
+          <p>Com dados de atendimento registrados, os gestores passam a ter visibilidade real sobre volume, tempo e performance da operação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. ARQUITETURA DO ECOSSISTEMA (MÍDIA 03 — diagrama HTML/CSS)
+  ============================================================ -->
+  <section id="arquitetura" class="section section--navy">
+    <div class="container">
+      <div class="section-label section-label--light">Arquitetura do ecossistema</div>
+      <h2 class="section-title section-title--light">O produto foi desenhado como um ecossistema: cada parte reduz uma incerteza específica da operação.</h2>
+
+      <div class="arch-diagram"
+           role="img"
+           aria-label="Diagrama do ecossistema Sartec mostrando WhatsApp, agente de IA, CRM, atendente humano, histórico e métricas.">
+
+        <div class="arch-main-flow">
+          <div class="arch-node arch-node--entry">
+            <div class="arch-node__icon" aria-hidden="true">📱</div>
+            <div class="arch-node__title">Cliente</div>
+            <div class="arch-node__desc">WhatsApp</div>
+          </div>
+
+          <div class="arch-connector">
+            <div class="arch-connector__line" aria-hidden="true"></div>
+            <div class="arch-connector__label">contato inicial</div>
+          </div>
+
+          <div class="arch-node arch-node--agent">
+            <div class="arch-node__icon" aria-hidden="true">🤖</div>
+            <div class="arch-node__title">Agente de triagem</div>
+            <div class="arch-node__desc">Classifica + coleta contexto</div>
+          </div>
+
+          <div class="arch-connector">
+            <div class="arch-connector__line" aria-hidden="true"></div>
+            <div class="arch-connector__label">classifica</div>
+          </div>
+
+          <div class="arch-split-container">
+            <div class="arch-split-label" aria-hidden="true">Fluxo separado por tipo de cliente</div>
+            <div class="arch-split">
+              <div class="arch-branch">
+                <div class="arch-branch__label">Pessoa Física</div>
+                <div class="arch-node arch-node--pf">
+                  <div class="arch-node__icon" aria-hidden="true">👤</div>
+                  <div class="arch-node__desc">Fluxo PF</div>
+                </div>
+              </div>
+              <div class="arch-branch">
+                <div class="arch-branch__label">Pessoa Jurídica</div>
+                <div class="arch-node arch-node--pj">
+                  <div class="arch-node__icon" aria-hidden="true">🏢</div>
+                  <div class="arch-node__desc">Fluxo PJ</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-connector">
+            <div class="arch-connector__line" aria-hidden="true"></div>
+            <div class="arch-connector__label">card criado no CRM</div>
+          </div>
+
+          <div class="arch-node arch-node--crm">
+            <div class="arch-node__icon" aria-hidden="true">📋</div>
+            <div class="arch-node__title">CRM Kanban</div>
+            <div class="arch-node__desc">Pipeline + responsável + estados</div>
+          </div>
+
+          <div class="arch-connector">
+            <div class="arch-connector__line" aria-hidden="true"></div>
+            <div class="arch-connector__label">assume atendimento</div>
+          </div>
+
+          <div class="arch-node arch-node--human">
+            <div class="arch-node__icon" aria-hidden="true">👨‍💼</div>
+            <div class="arch-node__title">Atendente humano</div>
+            <div class="arch-node__desc">Decisão + ação + resolução</div>
+          </div>
+        </div>
+
+        <div class="arch-outputs">
+          <div class="arch-outputs__title">Saídas do sistema</div>
+          <div class="arch-outputs__grid">
+            <div class="arch-output">
+              <span class="arch-output__icon" aria-hidden="true">📜</span>
+              <span>Histórico completo</span>
+            </div>
+            <div class="arch-output">
+              <span class="arch-output__icon" aria-hidden="true">📊</span>
+              <span>Métricas operacionais</span>
+            </div>
+            <div class="arch-output">
+              <span class="arch-output__icon" aria-hidden="true">📸</span>
+              <span>Mídias contextualizadas</span>
+            </div>
+            <div class="arch-output">
+              <span class="arch-output__icon" aria-hidden="true">🔔</span>
+              <span>Eventos de template</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-future">
+          <div class="arch-future__label">Desdobramento estratégico</div>
+          <div class="arch-node arch-node--digital">
+            <div class="arch-node__icon" aria-hidden="true">🌐</div>
+            <div class="arch-node__title">Sartec Digital</div>
+            <div class="arch-node__desc">Produto replicável para PMEs</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="media-caption media-caption--light">A arquitetura foi pensada para amplificar o humano, não substituir a operação.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. CRM SARTEC
+  ============================================================ -->
+  <section id="crm-sartec" class="section section--light">
+    <div class="container">
+      <div class="section-label">CRM Sartec</div>
+      <h2 class="section-title">Cada card precisava responder rapidamente: quem é o cliente, o que ele quer, onde está no fluxo, quem está atendendo e qual é a próxima ação.</h2>
+
+      <p class="section-intro">
+        O CRM foi projetado como ferramenta de operação, não de registro. A diferença é sutil mas crítica: em uma ferramenta de operação, o design serve para reduzir o tempo de decisão — não para documentar o que aconteceu.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card" data-animate>
+          <div class="feature-card__icon" aria-hidden="true">🗂️</div>
+          <h3>Kanban PF/PJ separados</h3>
+          <p>Dois pipelines com lógicas diferentes: PF com foco em velocidade de resposta; PJ com foco em contexto de conta e histórico de pedidos.</p>
+          <div class="feature-card__decision">
+            <strong>Decisão de UX:</strong> Separei PF e PJ como fluxos operacionais, não apenas como filtros visuais. Categoria e etapa são conceitos diferentes — exigem colunas e critérios diferentes.
+          </div>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-card__icon" aria-hidden="true">🏷️</div>
+          <h3>Cards com estado e prioridade</h3>
+          <p>Cada card mostra status, tempo de espera, mensagens não lidas e atendente responsável. O atendente vê o que precisa sem abrir o card.</p>
+          <div class="feature-card__decision">
+            <strong>Decisão de UX:</strong> Badge de mensagem aponta para a ação, não apenas informa. Verde indica janela aberta; amarelo indica janela expirando; cinza indica histórico resolvido.
+          </div>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-card__icon" aria-hidden="true">📜</div>
+          <h3>Histórico completo com mídia</h3>
+          <p>Mensagens, áudios, imagens, PDFs e eventos de sistema organizados por tempo. O atendente acessa o contexto completo da conversa antes de responder.</p>
+          <div class="feature-card__decision">
+            <strong>Decisão de UX:</strong> Mídias ficam renderizadas no histórico, não como links soltos. O contexto visual acelera a leitura operacional e reduz o tempo de decisão.
+          </div>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-card__icon" aria-hidden="true">👤</div>
+          <h3>Controle de atendente ativo</h3>
+          <p>Apenas um atendente pode estar ativo por conversa. O sistema mostra quem assumiu, quando assumiu e permite transferência explícita de responsabilidade.</p>
+          <div class="feature-card__decision">
+            <strong>Decisão de UX:</strong> Resolver o problema de dois atendentes respondendo simultaneamente. Assumir e liberar são ações deliberadas — não consequências acidentais de abrir uma janela.
+          </div>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-card__icon" aria-hidden="true">🔄</div>
+          <h3>Reabrir e resolver conversas</h3>
+          <p>Conversas resolvidas ficam em modo de leitura histórico. Resolver é uma ação explícita. Reabrir é possível e registra o evento no histórico com timestamp.</p>
+          <div class="feature-card__decision">
+            <strong>Decisão de UX:</strong> Cards resolvidos precisam parecer histórico, não tarefa ativa. Reduzir ruído visual no pipeline — o atendente foca no que está aberto.
+          </div>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-card__icon" aria-hidden="true">⏳</div>
+          <h3>Estados da janela WhatsApp</h3>
+          <p>A janela de 24h do WhatsApp tem estados visuais claros: aberta, expirando, fechada. Templates de reabertura ficam disponíveis no contexto certo, no momento certo.</p>
+          <div class="feature-card__decision">
+            <strong>Decisão de UX:</strong> O atendente não pode ignorar o estado da janela. O sistema torna visível o que antes era uma regra de negócio invisível — e que causava falhas silenciosas.
+          </div>
+        </div>
+      </div>
+
+      <!-- MÍDIA 04 — Screenshot do CRM Kanban
+           Arquivo esperado: assets/media/media-04-crm-kanban-sartec.png
+           Alt: Screenshot do CRM Sartec mostrando Kanban de atendimento com cards organizados por etapa. -->
+      <div class="media-block">
+        <div class="media-placeholder media-placeholder--screenshot"
+             role="img"
+             aria-label="Screenshot do CRM Sartec mostrando Kanban de atendimento com cards organizados por etapa.">
+          <div class="placeholder-inner">
+            <div class="placeholder-inner__icon" aria-hidden="true">📸</div>
+            <div class="placeholder-inner__title">Screenshot: Kanban do CRM Sartec</div>
+            <p class="placeholder-inner__desc">
+              Adicionar screenshot do painel Kanban mostrando colunas PF e PJ, cards com estados operacionais, badges de mensagens não lidas, indicadores de atendente ativo e status de janela WhatsApp.
+            </p>
+            <p class="placeholder-inner__storytelling">
+              <strong>Por que entra aqui:</strong> O recrutador precisa ver que o produto existe de forma tangível. Um Kanban com estados reais prova que as decisões de UX foram implementadas, não apenas especificadas.
+            </p>
+            <span class="placeholder-inner__file">assets/media/media-04-crm-kanban-sartec.png</span>
+          </div>
+        </div>
+        <p class="media-caption">O Kanban transforma mensagens em trabalho visível: estágio, prioridade, responsável e próxima ação.</p>
+      </div>
+
+      <!-- MÍDIA 05 — Screenshot do modal ou histórico
+           Arquivo esperado: assets/media/media-05-historico-conversa-crm.png
+           Alt: Modal do CRM Sartec com histórico de conversa, mensagens, mídia recebida e status operacional. -->
+      <div class="media-block">
+        <div class="media-placeholder media-placeholder--screenshot"
+             role="img"
+             aria-label="Modal do CRM Sartec com histórico de conversa, mensagens, mídia recebida e status operacional.">
+          <div class="placeholder-inner">
+            <div class="placeholder-inner__icon" aria-hidden="true">💬</div>
+            <div class="placeholder-inner__title">Screenshot: Modal de atendimento e histórico</div>
+            <p class="placeholder-inner__desc">
+              Adicionar screenshot do modal de conversa mostrando histórico de mensagens, mídias recebidas, barra de status da janela WhatsApp, compositor de mensagem e botões de ação operacional.
+            </p>
+            <p class="placeholder-inner__storytelling">
+              <strong>Por que entra aqui:</strong> Mostrar que o contexto completo está disponível para o atendente no momento da decisão — não apenas uma lista de mensagens, mas um ambiente de trabalho com ação.
+            </p>
+            <span class="placeholder-inner__file">assets/media/media-05-historico-conversa-crm.png</span>
+          </div>
+        </div>
+        <p class="media-caption">O histórico deixa de ser conversa solta e vira contexto operacional para decisão humana.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. AGENTE WHATSAPP SARTEC
+  ============================================================ -->
+  <section id="agente-whatsapp" class="section section--dark">
+    <div class="container">
+      <div class="section-label">Agente WhatsApp Sartec</div>
+      <h2 class="section-title">O agente foi desenhado para saber quando falar, quando perguntar e quando parar.</h2>
+
+      <p class="section-intro">
+        Projetei limites tão importantes quanto capacidades: o agente não vende, não inventa estoque e não disputa a conversa com o humano. UX conversacional também é design de produto.
+      </p>
+
+      <div class="agent-grid">
+        <div class="agent-card" data-animate>
+          <span class="agent-badge agent-badge--blue">Triagem</span>
+          <h3>Classificação PF/PJ na entrada</h3>
+          <p>O primeiro contato é sempre de triagem. O agente identifica se é pessoa física ou jurídica antes de qualquer outra ação, direcionando o fluxo correto desde o início.</p>
+        </div>
+        <div class="agent-card" data-animate>
+          <span class="agent-badge agent-badge--purple">Contexto</span>
+          <h3>Coleta de informação estruturada</h3>
+          <p>Para cada tipo de pedido, o agente faz as perguntas certas na ordem certa. O objetivo é criar um card no CRM que já chegue com informação suficiente para o humano agir.</p>
+        </div>
+        <div class="agent-card" data-animate>
+          <span class="agent-badge agent-badge--green">Handoff</span>
+          <h3>Transferência inteligente</h3>
+          <p>Quando o contexto está coletado, o agente encerra sua participação e transfere para o atendente humano. O handoff é registrado no histórico como evento, com timestamp e status.</p>
+        </div>
+        <div class="agent-card" data-animate>
+          <span class="agent-badge agent-badge--orange">Limite</span>
+          <h3>Regra mestre anti-alucinação</h3>
+          <p>O agente não responde sobre estoque, preços ou prazos sem confirmação humana. Quando chega a um ponto fora do seu escopo, ele reconhece e encaminha — não improvisa.</p>
+        </div>
+        <div class="agent-card" data-animate>
+          <span class="agent-badge agent-badge--teal">Templates</span>
+          <h3>Reabertura de janela</h3>
+          <p>Quando a janela de 24h expira, o atendente pode reabrir a conversa usando templates aprovados. O envio do template fica registrado no histórico como evento visível com status de entrega.</p>
+        </div>
+        <div class="agent-card" data-animate>
+          <span class="agent-badge agent-badge--red">Desvio</span>
+          <h3>Redirecionamento sem encerrar</h3>
+          <p>Pedidos de xerox são tratados de forma especial: o agente informa o processo mas mantém o atendimento aberto para outros itens. O fluxo não se perde por um pedido paralelo.</p>
+        </div>
+      </div>
+
+      <!-- MÍDIA 06 — Fluxo do agente WhatsApp (HTML/CSS timeline visual)
+           Arquivo futuro: assets/media/media-06-fluxo-agente-whatsapp.png
+           Alt: Fluxo conversacional do agente WhatsApp Sartec mostrando triagem, classificação e handoff. -->
+      <div class="media-block">
+        <div class="wf-container"
+             role="img"
+             aria-label="Fluxo conversacional do agente WhatsApp Sartec mostrando triagem, classificação e handoff.">
+          <div class="wf-header">Fluxo do agente — sequência de triagem e handoff</div>
+          <div class="wf-conversation">
+            <div class="wf-message wf-message--agent">
+              <div class="wf-bubble wf-bubble--agent">
+                Olá! Seja bem-vindo à Sartec 🎉<br>
+                Para te atender melhor, você é:
+                <div class="wf-options">
+                  <span class="wf-option">1️⃣ Pessoa Física</span>
+                  <span class="wf-option">2️⃣ Empresa / CNPJ</span>
+                </div>
+              </div>
+              <div class="wf-label">Agente · triagem inicial · classificação PF/PJ</div>
+            </div>
+            <div class="wf-message wf-message--client">
+              <div class="wf-bubble wf-bubble--client">2</div>
+              <div class="wf-label">Cliente · selecionou PJ → fluxo empresarial iniciado</div>
+            </div>
+            <div class="wf-message wf-message--agent">
+              <div class="wf-bubble wf-bubble--agent">
+                Ótimo! Para agilizar seu atendimento, pode me informar:<br>
+                • Nome da empresa<br>
+                • O que você precisa hoje?<br>
+                • Tem algum prazo específico?
+              </div>
+              <div class="wf-label">Agente · coleta de contexto PJ · campos estruturados</div>
+            </div>
+            <div class="wf-message wf-message--client">
+              <div class="wf-bubble wf-bubble--client">Empresa ABC. Preciso de 500 cartões de visita com logo. Prazo: 5 dias úteis.</div>
+              <div class="wf-label">Cliente · contexto completo coletado</div>
+            </div>
+            <div class="wf-message wf-message--agent">
+              <div class="wf-bubble wf-bubble--agent wf-bubble--handoff">
+                Perfeito! Anotei tudo 📋<br>
+                Um de nossos atendentes vai te contatar em breve com orçamento e confirmação. Se precisar de mais alguma coisa, é só falar!
+              </div>
+              <div class="wf-label wf-label--handoff">Agente · handoff executado · card criado no CRM · atendimento encerrado pelo agente</div>
+            </div>
+          </div>
+          <div class="wf-footer">
+            Substituir por: <code>assets/media/media-06-fluxo-agente-whatsapp.png</code> · Sequência real de triagem com print de conversa anonimizada.
+          </div>
+        </div>
+        <p class="media-caption">O agente foi desenhado para reduzir ambiguidade antes de encaminhar para o humano.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. DESIGN SYSTEM E UI OPERACIONAL
+  ============================================================ -->
+  <section id="design-system" class="section section--light">
+    <div class="container">
+      <div class="section-label">Design System e UI operacional</div>
+      <h2 class="section-title">O sistema visual precisava organizar decisão, não apenas criar identidade. Cor, badge e estado tinham função operacional.</h2>
+
+      <p class="section-intro">
+        Não criei um design system formal do zero. Criei um sistema visual operacional em evolução — tokens de cor, hierarquia, estados e componentes que servem ao atendimento, não à marca.
+      </p>
+
+      <!-- MÍDIA 07 — Design System / componentes operacionais (HTML/CSS)
+           Arquivo futuro: assets/media/media-07-design-system-operacional.png
+           Alt: Componentes visuais do sistema Sartec com cards, badges, estados e botões de ação. -->
+      <div class="ds-panel"
+           role="img"
+           aria-label="Componentes visuais do sistema Sartec com cards, badges, estados e botões de ação.">
+
+        <div class="ds-section">
+          <div class="ds-section__title">Tokens de cor</div>
+          <div class="ds-colors">
+            <div class="ds-color">
+              <div class="ds-color__swatch" style="background:#1B2A4A;" aria-hidden="true"></div>
+              <span class="ds-color__name">Navy</span>
+              <span class="ds-color__use">Fundo principal, header</span>
+            </div>
+            <div class="ds-color">
+              <div class="ds-color__swatch" style="background:#C8302B;" aria-hidden="true"></div>
+              <span class="ds-color__name">Red Sartec</span>
+              <span class="ds-color__use">Urgência, ação primária</span>
+            </div>
+            <div class="ds-color">
+              <div class="ds-color__swatch" style="background:#1A7A4A;" aria-hidden="true"></div>
+              <span class="ds-color__name">Green</span>
+              <span class="ds-color__use">Janela aberta, resolvido</span>
+            </div>
+            <div class="ds-color">
+              <div class="ds-color__swatch" style="background:#D97706;" aria-hidden="true"></div>
+              <span class="ds-color__name">Amber</span>
+              <span class="ds-color__use">Janela expirando, atenção</span>
+            </div>
+            <div class="ds-color">
+              <div class="ds-color__swatch" style="background:#6B7B9A;" aria-hidden="true"></div>
+              <span class="ds-color__name">Gray Mid</span>
+              <span class="ds-color__use">Inativo, histórico, leitura</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-section">
+          <div class="ds-section__title">Estados da janela WhatsApp</div>
+          <div class="ds-states">
+            <div class="ds-state">
+              <div class="state-badge state-badge--open">● Janela aberta</div>
+              <span class="ds-state__desc">Pode responder normalmente</span>
+            </div>
+            <div class="ds-state">
+              <div class="state-badge state-badge--expiring">● Expirando em breve</div>
+              <span class="ds-state__desc">Resposta urgente necessária</span>
+            </div>
+            <div class="ds-state">
+              <div class="state-badge state-badge--closed">● Janela fechada</div>
+              <span class="ds-state__desc">Usar template para reabrir</span>
+            </div>
+            <div class="ds-state">
+              <div class="state-badge state-badge--resolved">✓ Resolvido</div>
+              <span class="ds-state__desc">Histórico, não tarefa ativa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-section">
+          <div class="ds-section__title">Exemplos de cards operacionais</div>
+          <div class="ds-cards">
+            <div class="ds-card ds-card--pf">
+              <div class="ds-card__header">
+                <span class="ds-card__type">PF</span>
+                <span class="ds-card__badge">3 novas</span>
+              </div>
+              <div class="ds-card__name">João Silva</div>
+              <div class="ds-card__info">Xerox colorido · Urgente</div>
+              <div class="ds-card__footer">
+                <span class="ds-card__agent">Atendente: Ana</span>
+                <span class="ds-card__time">há 12min</span>
+              </div>
+            </div>
+            <div class="ds-card ds-card--pj">
+              <div class="ds-card__header">
+                <span class="ds-card__type ds-card__type--pj">PJ</span>
+                <span class="ds-card__badge ds-card__badge--closed">Janela fechada</span>
+              </div>
+              <div class="ds-card__name">Empresa ABC Ltda</div>
+              <div class="ds-card__info">500 cartões de visita</div>
+              <div class="ds-card__footer">
+                <span class="ds-card__agent">Atendente: Lucas</span>
+                <span class="ds-card__time">há 2h</span>
+              </div>
+            </div>
+            <div class="ds-card ds-card--resolved">
+              <div class="ds-card__header">
+                <span class="ds-card__type">PF</span>
+                <span class="ds-card__badge ds-card__badge--resolved">✓ Resolvido</span>
+              </div>
+              <div class="ds-card__name">Maria Oliveira</div>
+              <div class="ds-card__info">Encadernação espiral</div>
+              <div class="ds-card__footer">
+                <span class="ds-card__agent">Histórico</span>
+                <span class="ds-card__time">ontem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-footer">
+          Substituir por: <code>assets/media/media-07-design-system-operacional.png</code> · Painel com tokens, badges, cards e estados em tela real do produto.
+        </div>
+      </div>
+      <p class="media-caption">O sistema visual não foi pensado para decorar a interface, mas para reduzir erro em operação.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. PROCESSO DE TRABALHO
+  ============================================================ -->
+  <section id="processo" class="section section--navy">
+    <div class="container">
+      <div class="section-label section-label--light">Processo de trabalho</div>
+      <h2 class="section-title section-title--light">Meu papel foi transformar ambiguidade operacional em prompts, critérios, estados, interfaces e validações.</h2>
+
+      <p class="section-intro section-intro--light">
+        Uso IA como alavanca de execução — não como substituta do critério de produto. Eu defino escopo, escrevo critérios de aceite, conduzo a implementação, reviso o resultado e valido com a equipe real.
+      </p>
+
+      <!-- MÍDIA 08 — Processo de trabalho com IA (HTML/CSS timeline)
+           Arquivo futuro: assets/media/media-08-processo-ia-produto.png
+           Alt: Fluxo de trabalho mostrando uso de IA para especificação, implementação assistida, validação e documentação. -->
+      <div class="process-timeline"
+           role="img"
+           aria-label="Fluxo de trabalho mostrando uso de IA para especificação, implementação assistida, validação e documentação.">
+        <div class="process-step" data-animate>
+          <div class="process-step__number" aria-hidden="true">1</div>
+          <div class="process-step__body">
+            <h3>Observar operação real</h3>
+            <p>Entender o fluxo existente, mapear gargalos e identificar o que a equipe precisa enxergar para decidir melhor. Pesquisa contextual no ambiente de trabalho real, não em reunião.</p>
+            <span class="process-step__method">Método: observação + entrevista contextual</span>
+          </div>
+        </div>
+        <div class="process-step" data-animate>
+          <div class="process-step__number" aria-hidden="true">2</div>
+          <div class="process-step__body">
+            <h3>Identificar gargalo e tese de produto</h3>
+            <p>Separar sintoma de causa. O problema não era volume — era falta de sistema. Transformar a observação em decisão de produto com escopo e critério definidos.</p>
+            <span class="process-step__method">Método: análise de fluxo + hipótese de produto</span>
+          </div>
+        </div>
+        <div class="process-step" data-animate>
+          <div class="process-step__number" aria-hidden="true">3</div>
+          <div class="process-step__body">
+            <h3>Especificar comportamento</h3>
+            <p>Descrever cada estado, cada transição, cada regra de negócio com clareza suficiente para ser implementada. Critérios de aceite antes de qualquer código ou prompt.</p>
+            <span class="process-step__method">Método: especificação de estado + UX writing + fluxograma</span>
+          </div>
+        </div>
+        <div class="process-step" data-animate>
+          <div class="process-step__number" aria-hidden="true">4</div>
+          <div class="process-step__body">
+            <h3>Conduzir implementação com IA</h3>
+            <p>Usar Claude Code, ChatGPT e outras ferramentas como alavanca de execução. Escrever prompts precisos, revisar saídas com critério de produto e ajustar o que não faz sentido operacional.</p>
+            <span class="process-step__method">Ferramentas: Claude Code · ChatGPT · prompts de produto</span>
+          </div>
+        </div>
+        <div class="process-step" data-animate>
+          <div class="process-step__number" aria-hidden="true">5</div>
+          <div class="process-step__body">
+            <h3>Validar no produto real</h3>
+            <p>Testar com a equipe de atendimento em operação real. Observar o uso, coletar feedback qualitativo e identificar o que a especificação não tinha capturado antes de escalar.</p>
+            <span class="process-step__method">Método: teste de uso com equipe real + observação de atendimento</span>
+          </div>
+        </div>
+        <div class="process-step" data-animate>
+          <div class="process-step__number" aria-hidden="true">6</div>
+          <div class="process-step__body">
+            <h3>Ajustar com feedback da equipe</h3>
+            <p>Iterar com base no uso real. Incluindo decisões difíceis como rollback de feature instável no mobile — o produto não pode falhar em operação real por detalhe não validado.</p>
+            <span class="process-step__method">Método: iteração orientada por feedback operacional</span>
+          </div>
+        </div>
+        <div class="process-step" data-animate>
+          <div class="process-step__number" aria-hidden="true">7</div>
+          <div class="process-step__body">
+            <h3>Documentar decisões e próximos passos</h3>
+            <p>Registrar o raciocínio por trás de cada escolha, não apenas o resultado. Documentação de produto que serve para evolução futura, não apenas para histórico de versão.</p>
+            <span class="process-step__method">Método: registro de decisões de produto + roadmap de continuidade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-note">
+        Substituir por: <code>assets/media/media-08-processo-ia-produto.png</code> · Ilustração visual do fluxo: diagnóstico → especificação → implementação assistida → validação → registro.
+      </div>
+      <p class="media-caption media-caption--light">A IA entrou como alavanca de execução. O critério de produto continuou humano.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       10. DECISÕES DE PRODUTO EM DESTAQUE
+  ============================================================ -->
+  <section id="decisoes" class="section section--light">
+    <div class="container">
+      <div class="section-label">Decisões de produto em destaque</div>
+      <h2 class="section-title">Julgamento de produto não é sobre o que foi implementado. É sobre por que foi implementado assim.</h2>
+
+      <div class="decisions-grid">
+        <article class="decision-card" data-animate>
+          <div class="decision-card__header">
+            <span class="decision-card__number">01</span>
+            <span class="decision-card__competence">UX Operacional</span>
+          </div>
+          <h3 class="decision-card__title">PF e PJ como fluxos diferentes</h3>
+          <div class="decision-card__row">
+            <strong>Problema:</strong>
+            <p>Clientes PF e empresas chegavam pelo mesmo canal com necessidades incompatíveis. PJ exige CNPJ, prazo empresarial e histórico de conta; PF exige velocidade e clareza.</p>
+          </div>
+          <div class="decision-card__row">
+            <strong>Valor para a operação:</strong>
+            <p>O pipeline certo reduz a carga de decisão do atendente — o contexto certo já está no lugar certo, para o tipo certo de cliente.</p>
+          </div>
+          <div class="decision-card__tags">
+            <span class="decision-tag">UX operacional</span>
+            <span class="decision-tag">Arquitetura de informação</span>
+          </div>
+        </article>
+
+        <article class="decision-card" data-animate>
+          <div class="decision-card__header">
+            <span class="decision-card__number">02</span>
+            <span class="decision-card__competence">Auditoria de fluxo</span>
+          </div>
+          <h3 class="decision-card__title">Templates registrados no histórico</h3>
+          <div class="decision-card__row">
+            <strong>Problema:</strong>
+            <p>O cliente recebia uma mensagem de reabertura de janela que o atendente não via no CRM. Assimetria de contexto: o cliente sabia de algo que o atendente não sabia.</p>
+          </div>
+          <div class="decision-card__row">
+            <strong>Valor para a operação:</strong>
+            <p>Todo envio de template vira evento no histórico com horário e status de entrega. O atendente nunca pergunta "você recebeu?" sem ter a resposta disponível no sistema.</p>
+          </div>
+          <div class="decision-card__tags">
+            <span class="decision-tag">UX operacional</span>
+            <span class="decision-tag">Auditoria de fluxo</span>
+            <span class="decision-tag">Visão de serviço</span>
+          </div>
+        </article>
+
+        <article class="decision-card" data-animate>
+          <div class="decision-card__header">
+            <span class="decision-card__number">03</span>
+            <span class="decision-card__competence">Design de handoff</span>
+          </div>
+          <h3 class="decision-card__title">Handoff inteligente do agente</h3>
+          <div class="decision-card__row">
+            <strong>Problema:</strong>
+            <p>Se o agente tentasse resolver tudo, geraria fricção com o humano. Se encaminhasse sem contexto, o atendente receberia um card vazio — sem informação para agir.</p>
+          </div>
+          <div class="decision-card__row">
+            <strong>Valor para a operação:</strong>
+            <p>O agente encaminha quando tem contexto suficiente. O card que chega ao atendente já tem tipo de cliente, necessidade, urgência e pré-qualificação.</p>
+          </div>
+          <div class="decision-card__tags">
+            <span class="decision-tag">UX conversacional</span>
+            <span class="decision-tag">Design de sistema</span>
+            <span class="decision-tag">Handoff de agente</span>
+          </div>
+        </article>
+
+        <article class="decision-card" data-animate>
+          <div class="decision-card__header">
+            <span class="decision-card__number">04</span>
+            <span class="decision-card__competence">UX Writing</span>
+          </div>
+          <h3 class="decision-card__title">Mensagens de erro humanas</h3>
+          <div class="decision-card__row">
+            <strong>Problema:</strong>
+            <p>Erros técnicos chegavam como mensagens genéricas e sem ação clara. O atendente não sabia se devia tentar de novo, esperar ou chamar suporte.</p>
+          </div>
+          <div class="decision-card__row">
+            <strong>Valor para a operação:</strong>
+            <p>Cada erro tem texto específico com causa e ação sugerida. O sistema não apenas informa o erro — ele orienta a próxima decisão do atendente.</p>
+          </div>
+          <div class="decision-card__tags">
+            <span class="decision-tag">UX writing</span>
+            <span class="decision-tag">Microcopy</span>
+            <span class="decision-tag">Design de estados</span>
+          </div>
+        </article>
+
+        <article class="decision-card" data-animate>
+          <div class="decision-card__header">
+            <span class="decision-card__number">05</span>
+            <span class="decision-card__competence">Rollback estratégico</span>
+          </div>
+          <h3 class="decision-card__title">Rollback de feature mobile instável</h3>
+          <div class="decision-card__row">
+            <strong>Problema:</strong>
+            <p>Uma feature mobile foi lançada e apresentou instabilidade em uso real. A equipe usava em atendimento ativo — o risco de falha em produção era inaceitável.</p>
+          </div>
+          <div class="decision-card__row">
+            <strong>Valor para a operação:</strong>
+            <p>Decidi reverter e estabilizar antes de relançar. Rollback é uma decisão de produto, não uma falha. Confiabilidade operacional supera velocidade de entrega.</p>
+          </div>
+          <div class="decision-card__tags">
+            <span class="decision-tag">Julgamento de produto</span>
+            <span class="decision-tag">Confiabilidade</span>
+            <span class="decision-tag">Trade-off</span>
+          </div>
+        </article>
+
+        <article class="decision-card" data-animate>
+          <div class="decision-card__header">
+            <span class="decision-card__number">06</span>
+            <span class="decision-card__competence">Gestão operacional</span>
+          </div>
+          <h3 class="decision-card__title">Métricas com escopo por gestão</h3>
+          <div class="decision-card__row">
+            <strong>Problema:</strong>
+            <p>Os dados de atendimento existiam mas estavam inacessíveis. Os gestores precisavam de visibilidade sem expor dados sensíveis ou sobrecarregar os atendentes.</p>
+          </div>
+          <div class="decision-card__row">
+            <strong>Valor para a operação:</strong>
+            <p>Métricas restritas para gestores: volume, tempo de resposta, status por atendente. Os dados abrem caminho para decisão de escala sem mudar o fluxo de atendimento.</p>
+          </div>
+          <div class="decision-card__tags">
+            <span class="decision-tag">Produto</span>
+            <span class="decision-tag">Permissões</span>
+            <span class="decision-tag">Visibilidade operacional</span>
+          </div>
+        </article>
+
+        <article class="decision-card" data-animate>
+          <div class="decision-card__header">
+            <span class="decision-card__number">07</span>
+            <span class="decision-card__competence">Controle de atendimento</span>
+          </div>
+          <h3 class="decision-card__title">Assumir e liberar atendimento</h3>
+          <div class="decision-card__row">
+            <strong>Problema:</strong>
+            <p>Dois atendentes podiam entrar na mesma conversa sem saber que o outro estava ali. O sistema precisava tornar a responsabilidade visível e deliberada.</p>
+          </div>
+          <div class="decision-card__row">
+            <strong>Valor para a operação:</strong>
+            <p>Assumir é um ato explícito. Liberar também. O sistema registra quem está ativo, quando assumiu e permite transferência com log. Nenhuma conversa fica sem dono invisível.</p>
+          </div>
+          <div class="decision-card__tags">
+            <span class="decision-tag">UX operacional</span>
+            <span class="decision-tag">Estado de sistema</span>
+            <span class="decision-tag">Rastreabilidade</span>
+          </div>
+        </article>
+
+        <article class="decision-card" data-animate>
+          <div class="decision-card__header">
+            <span class="decision-card__number">08</span>
+            <span class="decision-card__competence">Arquitetura mobile</span>
+          </div>
+          <h3 class="decision-card__title">Mobile com arquitetura própria</h3>
+          <div class="decision-card__row">
+            <strong>Problema:</strong>
+            <p>A versão mobile começou como responsivo do desktop. Em uso real ficou claro que o atendente no celular tem contexto, postura e ações diferentes do atendente no computador.</p>
+          </div>
+          <div class="decision-card__row">
+            <strong>Valor para a operação:</strong>
+            <p>Redesenhei o mobile com arquitetura própria: menos colunas, ações rápidas em destaque, hierarquia simplificada. Mobile não é desktop pequeno — é outro contexto de uso.</p>
+          </div>
+          <div class="decision-card__tags">
+            <span class="decision-tag">Design responsivo</span>
+            <span class="decision-tag">Arquitetura mobile</span>
+            <span class="decision-tag">Contexto de uso</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       11. ANTES E DEPOIS
+  ============================================================ -->
+  <section id="antes-depois" class="section section--dark">
+    <div class="container">
+      <div class="section-label">Antes e depois</div>
+      <h2 class="section-title">O antes era uma caixa de entrada. O depois é um sistema de trabalho.</h2>
+
+      <!-- MÍDIA 09 — Antes e depois (HTML/CSS obrigatório)
+           Arquivo futuro: assets/media/media-09-antes-depois-sartec.png
+           Alt: Comparação entre atendimento informal por WhatsApp e atendimento organizado pelo CRM Sartec. -->
+      <div class="before-after"
+           role="img"
+           aria-label="Comparação entre atendimento informal por WhatsApp e atendimento organizado pelo CRM Sartec.">
+        <div class="ba-panel ba-panel--before">
+          <div class="ba-panel__header">
+            <span class="ba-label ba-label--before">Antes</span>
+            <h3 class="ba-panel__title">WhatsApp informal</h3>
+          </div>
+          <ul class="ba-list">
+            <li class="ba-item ba-item--no"><span class="ba-item__icon" aria-hidden="true">✕</span><span>Atendimento no WhatsApp sem pipeline</span></li>
+            <li class="ba-item ba-item--no"><span class="ba-item__icon" aria-hidden="true">✕</span><span>Sem responsável visível por conversa</span></li>
+            <li class="ba-item ba-item--no"><span class="ba-item__icon" aria-hidden="true">✕</span><span>PF e PJ misturados sem separação</span></li>
+            <li class="ba-item ba-item--no"><span class="ba-item__icon" aria-hidden="true">✕</span><span>Histórico inacessível e não estruturado</span></li>
+            <li class="ba-item ba-item--no"><span class="ba-item__icon" aria-hidden="true">✕</span><span>Mídias espalhadas sem contexto</span></li>
+            <li class="ba-item ba-item--no"><span class="ba-item__icon" aria-hidden="true">✕</span><span>Janela de 24h invisível para o atendente</span></li>
+            <li class="ba-item ba-item--no"><span class="ba-item__icon" aria-hidden="true">✕</span><span>Templates enviados sem registro no sistema</span></li>
+            <li class="ba-item ba-item--no"><span class="ba-item__icon" aria-hidden="true">✕</span><span>Sem métricas de atendimento</span></li>
+            <li class="ba-item ba-item--no"><span class="ba-item__icon" aria-hidden="true">✕</span><span>Decisões tomadas sem contexto</span></li>
+          </ul>
+        </div>
+
+        <div class="ba-divider" aria-hidden="true">
+          <div class="ba-divider__arrow">→</div>
+          <div class="ba-divider__label">transformação</div>
+        </div>
+
+        <div class="ba-panel ba-panel--after">
+          <div class="ba-panel__header">
+            <span class="ba-label ba-label--after">Depois</span>
+            <h3 class="ba-panel__title">Ecossistema operacional</h3>
+          </div>
+          <ul class="ba-list">
+            <li class="ba-item ba-item--yes"><span class="ba-item__icon" aria-hidden="true">✓</span><span>CRM Kanban com pipeline por fluxo</span></li>
+            <li class="ba-item ba-item--yes"><span class="ba-item__icon" aria-hidden="true">✓</span><span>Atendente ativo visível e registrado</span></li>
+            <li class="ba-item ba-item--yes"><span class="ba-item__icon" aria-hidden="true">✓</span><span>Pipelines PF/PJ separados por lógica</span></li>
+            <li class="ba-item ba-item--yes"><span class="ba-item__icon" aria-hidden="true">✓</span><span>Histórico completo com mídia e eventos</span></li>
+            <li class="ba-item ba-item--yes"><span class="ba-item__icon" aria-hidden="true">✓</span><span>Mídias renderizadas no contexto da conversa</span></li>
+            <li class="ba-item ba-item--yes"><span class="ba-item__icon" aria-hidden="true">✓</span><span>Status de janela com badge e alerta</span></li>
+            <li class="ba-item ba-item--yes"><span class="ba-item__icon" aria-hidden="true">✓</span><span>Templates registrados como eventos auditáveis</span></li>
+            <li class="ba-item ba-item--yes"><span class="ba-item__icon" aria-hidden="true">✓</span><span>Métricas operacionais para gestão</span></li>
+            <li class="ba-item ba-item--yes"><span class="ba-item__icon" aria-hidden="true">✓</span><span>Agente de triagem com handoff estruturado</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="media-caption">A mudança central foi sair de mensagens soltas para um sistema de trabalho.</p>
+      <div class="ba-note">
+        Substituir por: <code>assets/media/media-09-antes-depois-sartec.png</code> · Screenshots lado a lado do WhatsApp informal vs. CRM operacional em uso real.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       12. COMO NASCEU A SARTEC DIGITAL
+  ============================================================ -->
+  <section id="sartec-digital" class="section section--light">
+    <div class="container">
+      <div class="section-label">Sartec Digital</div>
+      <h2 class="section-title">A Sartec Digital não nasceu de uma marca inventada. Nasceu quando uma solução interna revelou uma dor replicável.</h2>
+
+      <p class="section-intro">
+        A Sartec Digital nasce quando uma solução interna revela uma dor comum de mercado. O caminho foi: dor real → solução testada → oportunidade identificada.
+      </p>
+
+      <!-- MÍDIA 10 — Sartec Digital (HTML/CSS)
+           Arquivo futuro: assets/media/media-10-nascimento-sartec-digital.png
+           Alt: Representação visual do nascimento da Sartec Digital a partir do ecossistema interno da Sartec. -->
+      <div class="evolution"
+           role="img"
+           aria-label="Representação visual do nascimento da Sartec Digital a partir do ecossistema interno da Sartec.">
+        <div class="evolution-step">
+          <div class="evolution-step__icon" aria-hidden="true">🏪</div>
+          <div class="evolution-step__body">
+            <div class="evolution-step__stage">Etapa 1</div>
+            <h3>Dor interna real</h3>
+            <p>A Sartec Papelaria atende pelo WhatsApp com alto volume. O processo era informal, sem sistema. A operação funcionava apesar das ferramentas, não por causa delas.</p>
+          </div>
+        </div>
+        <div class="evolution-connector" aria-hidden="true">↓</div>
+        <div class="evolution-step">
+          <div class="evolution-step__icon" aria-hidden="true">🔧</div>
+          <div class="evolution-step__body">
+            <div class="evolution-step__stage">Etapa 2</div>
+            <h3>Solução construída e validada</h3>
+            <p>O ecossistema foi criado para resolver a dor interna. CRM, agente, histórico, estados e métricas. Validado em operação real com equipe real, iterado com feedback direto.</p>
+          </div>
+        </div>
+        <div class="evolution-connector" aria-hidden="true">↓</div>
+        <div class="evolution-step">
+          <div class="evolution-step__icon" aria-hidden="true">💡</div>
+          <div class="evolution-step__body">
+            <div class="evolution-step__stage">Etapa 3</div>
+            <h3>Padrão de dor reconhecido</h3>
+            <p>A mesma dor existe em dezenas de pequenos e médios negócios que vendem pelo WhatsApp: restaurantes, lojas, prestadores de serviço, clínicas. Todos sem sistema, todos com o mesmo problema.</p>
+          </div>
+        </div>
+        <div class="evolution-connector" aria-hidden="true">↓</div>
+        <div class="evolution-step evolution-step--highlight">
+          <div class="evolution-step__icon" aria-hidden="true">🌐</div>
+          <div class="evolution-step__body">
+            <div class="evolution-step__stage">Desdobramento natural</div>
+            <h3>Sartec Digital</h3>
+            <p>Produto replicável: o mesmo ecossistema adaptado como serviço para PMEs. A base foi validada internamente. A oportunidade de mercado está identificada e fundamentada em uso real.</p>
+            <span class="badge badge--navy">Produto em desenvolvimento</span>
+          </div>
+        </div>
+        <div class="evolution-note">
+          Substituir por: <code>assets/media/media-10-nascimento-sartec-digital.png</code> · Imagem conceitual do caminho: dor interna → solução operacional → produto replicável para PMEs.
+        </div>
+      </div>
+
+      <p class="media-caption">A Sartec Digital nasce quando uma solução interna revela uma dor comum de mercado.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       13. APRENDIZADOS
+  ============================================================ -->
+  <section id="aprendizados" class="section section--navy">
+    <div class="container">
+      <div class="section-label section-label--light">Aprendizados</div>
+      <h2 class="section-title section-title--light">O que esse projeto ensinou sobre produto, design e decisão.</h2>
+
+      <div class="learnings-grid">
+        <div class="learning-card" data-animate>
+          <div class="learning-card__icon" aria-hidden="true">⚙️</div>
+          <h3>Nem toda automação melhora a experiência</h3>
+          <p>Automatizar um processo ruim produz um processo ruim mais rápido. O agente funciona bem porque o processo manual foi entendido e redesenhado antes de ser automatizado.</p>
+        </div>
+        <div class="learning-card" data-animate>
+          <div class="learning-card__icon" aria-hidden="true">🤖</div>
+          <h3>Um bot bom precisa saber seus limites</h3>
+          <p>As melhores decisões de design do agente foram de restrição, não de capacidade. Saber quando parar é a feature mais importante de qualquer automação conversacional.</p>
+        </div>
+        <div class="learning-card" data-animate>
+          <div class="learning-card__icon" aria-hidden="true">🛠️</div>
+          <h3>Ferramenta interna também precisa de UX forte</h3>
+          <p>O argumento "é só para uso interno" não reduz a responsabilidade de UX. Atendentes que usam uma ferramenta ruim por 8 horas por dia sofrem o impacto operacional e humano disso.</p>
+        </div>
+        <div class="learning-card" data-animate>
+          <div class="learning-card__icon" aria-hidden="true">↩️</div>
+          <h3>Rollback também é decisão de produto</h3>
+          <p>Reverter uma feature instável exige mais coragem do que segurar o lançamento. Em produto de operação, confiabilidade supera velocidade. Aprendi isso com um episódio real.</p>
+        </div>
+        <div class="learning-card" data-animate>
+          <div class="learning-card__icon" aria-hidden="true">📱</div>
+          <h3>Mobile exige decisões próprias</h3>
+          <p>Responsivo resolve layout. Não resolve arquitetura de uso. O atendente no celular precisa de uma interface diferente — não da mesma interface reduzida.</p>
+        </div>
+        <div class="learning-card" data-animate>
+          <div class="learning-card__icon" aria-hidden="true">🔔</div>
+          <h3>Estados e feedback são tão importantes quanto telas</h3>
+          <p>O atendente não precisa saber como o sistema funciona. Precisa saber o que o sistema quer dizer. Estados claros e microcopy preciso reduzem erro melhor do que qualquer tutorial.</p>
+        </div>
+        <div class="learning-card" data-animate>
+          <div class="learning-card__icon" aria-hidden="true">🎨</div>
+          <h3>Design Systems operacionais precisam dar clareza</h3>
+          <p>Beleza é consequência, não objetivo. Em ferramenta de atendimento, cor serve para diferenciar urgência; badge serve para apontar ação; consistência serve para reduzir carga cognitiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       14. PRÓXIMOS PASSOS
+  ============================================================ -->
+  <section id="proximos-passos" class="section section--light">
+    <div class="container">
+      <div class="section-label">Próximos passos</div>
+      <h2 class="section-title">O produto já opera, mas o case continua evoluindo como sistema.</h2>
+      <p class="section-intro">
+        Mais métricas, mais documentação e mais clareza sobre impacto. A evolução não para porque o produto está em produção — é porque está em produção que a evolução faz sentido.
+      </p>
+
+      <div class="nextsteps-grid">
+        <div class="nextstep-card" data-animate>
+          <div class="nextstep-card__icon" aria-hidden="true">👥</div>
+          <h3>Evoluir contatos</h3>
+          <p>Enriquecer o cadastro de clientes com histórico de pedidos, preferências e contexto acumulado. Transformar o contato em relacionamento rastreável.</p>
+        </div>
+        <div class="nextstep-card" data-animate>
+          <div class="nextstep-card__icon" aria-hidden="true">📊</div>
+          <h3>Refinar métricas</h3>
+          <p>Ampliar os dados de operação: tempo médio por tipo de atendimento, taxa de resolução na primeira interação, volume por período e atendente.</p>
+        </div>
+        <div class="nextstep-card" data-animate>
+          <div class="nextstep-card__icon" aria-hidden="true">📋</div>
+          <h3>Relatórios operacionais</h3>
+          <p>Criar visão gerencial com exportação de relatórios periódicos para tomada de decisão de escala e gestão de equipe.</p>
+        </div>
+        <div class="nextstep-card" data-animate>
+          <div class="nextstep-card__icon" aria-hidden="true">🔄</div>
+          <h3>Oferta replicável</h3>
+          <p>Transformar os aprendizados em especificação de produto para a Sartec Digital: o que funciona internamente precisa ser desacoplado para funcionar em outros contextos.</p>
+        </div>
+        <div class="nextstep-card" data-animate>
+          <div class="nextstep-card__icon" aria-hidden="true">📝</div>
+          <h3>Documentação do case</h3>
+          <p>Adicionar screenshots reais, métricas de uso e evidências de impacto operacional. Tornar o case ainda mais concreto e verificável para recrutadores e stakeholders.</p>
+        </div>
+        <div class="nextstep-card" data-animate>
+          <div class="nextstep-card__icon" aria-hidden="true">🔗</div>
+          <h3>Conectar com portfólio</h3>
+          <p>Integrar este case ao portfólio pessoal e à Sartec Digital, criando uma narrativa coerente de visão de produto, execução e resultado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       15. CTA FINAL
+  ============================================================ -->
+  <section id="cta-final" class="section section--cta">
+    <div class="container">
+      <div class="cta-inner">
+        <blockquote class="cta-quote">
+          "Este case resume como eu trabalho: começo pelo problema real, desenho o fluxo, organizo a interface, conduzo a implementação e valido em uso real."
+        </blockquote>
+        <h2 class="cta-title">Quer conversar sobre produto, design e execução?</h2>
+        <p class="cta-text">
+          Sou Lucas Alves Cabral, Product Designer próximo da implementação. Este ecossistema foi construído com método, critério e validação real — não como exercício conceitual.
+        </p>
+        <div class="cta-actions">
+          <a href="#top" class="btn btn--outline">Voltar ao topo</a>
+          <a href="mailto:lac.lucascabral@gmail.com" class="btn btn--primary">Entrar em contato</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-credits">
+          <span>Case Ecossistema Sartec</span>
+          <span aria-hidden="true">·</span>
+          <span>Lucas Alves Cabral · Product Designer</span>
+        </div>
+        <div class="footer-note">
+          Produto em produção · CRM real · Atendimento real
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
